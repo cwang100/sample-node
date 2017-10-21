@@ -40,8 +40,8 @@ User.generateHash = function(password) {
    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
 
-User.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
+User.validPassword = function(user, password) {
+    return bcrypt.compareSync(password, user.password);
 };
 
 module.exports = User;
