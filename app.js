@@ -10,7 +10,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-require('./config/passport')(passport); // pass passport for configuration
+require('./app/passport')(passport); // pass passport
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
