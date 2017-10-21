@@ -4,6 +4,7 @@ var app      = express();
 var port     = process.env.PORT || 3000;
 var passport = require('passport');
 var flash    = require('connect-flash');
+var engine   = require('ejs-locals');
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -11,6 +12,8 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 require('./app/passport')(passport); // pass passport
+
+app.engine('ejs', engine);
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
