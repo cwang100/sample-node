@@ -7,6 +7,14 @@ module.exports = function(app, passport) {
   });
 
   // =====================================
+  // HOME ===============================
+  // =====================================
+  app.get('/index', function(req, res) {
+    // render the page and pass in any flash data if it exists
+    res.render('index.ejs', { message: req.flash('loginMessage') }); 
+  });
+
+  // =====================================
   // LOGIN ===============================
   // =====================================
   app.get('/login', function(req, res) {
