@@ -1,7 +1,7 @@
 var bcrypt   = require('bcrypt-nodejs');
 var Sequelize= require('sequelize');
 var mysql    = require('mysql2');
-var configDB     = require('../../config/database.js');
+var configDB     = require('../../../database.js');
 
 // configuration ===============================================================
 var sequelize = new Sequelize(configDB.database, configDB.user, configDB.password, {
