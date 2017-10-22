@@ -161,6 +161,17 @@ body {
 
 .background_chicago_img {
   background-image: url("../img/chicago_cloud_gate.jpg");
-  background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+}
+
+.header {
+  width:100%;
+}
+
+.header_blur_mask {
+  width:100%;
+  background-size: 100%;
+
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
 }
